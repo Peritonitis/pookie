@@ -33,7 +33,7 @@ nop.addEventListener("click", function(){
     yay.play();
     setTimeout(function() {
         alert("YAAAAY I LOVE YOU BABY");
-    }, 1000); // Delay in milliseconds (1000 ms = 1 second)
+    }, 300); // Delay in milliseconds (1000 ms = 1 second)
 })
 
 sip.addEventListener("click", function(){
@@ -41,7 +41,7 @@ sip.addEventListener("click", function(){
     yay.play();
     setTimeout(function() {
         alert("YAAAAY I LOVE YOU BABY");
-    }, 1000); // Delay in milliseconds (1000 ms = 1 second)
+    }, 300); // Delay in milliseconds (1000 ms = 1 second)
 })
 
 
