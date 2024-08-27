@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 100vh;
     display: flex;
@@ -7,59 +7,80 @@ body{
     background-size: 12rem;
 }
 
-.options{
+.options {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%; /* Ensure the container fills the available space */
     margin: auto;
 }
 
-.divbord{
-    /* border-style: solid; */
+.divbord {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 	30%;
-    margin: auto ;
+    max-width: 90%; /* Make the width flexible */
+    margin: auto;
     border-radius: 20px;
+    padding: 20px; /* Add padding for spacing */
 }
 
-h2{
+h2 {
     text-align: center;
     width: auto;
     margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
-#fondo{
+#fondo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #F1FDF3;
     box-shadow: 6px 10px 20px 5px;
+    padding: 20px; /* Add padding to avoid overlap */
 }
 
-button{
+button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     margin: 1rem;
     background-color: #90ca92;
-    transition: background-color 0.2s ease-in, border-radius 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in;
+    transition: background-color 0.2s ease-in, border-radius 0.2s ease-in, flex-basis 0.2s ease-in, height 0.2s ease-in;
     border-radius: 10px;
     font-size: large;
     border-style: none;
     box-shadow: 6px 6px 15px 1px;
     padding: 7px;
-    width: 100px;
+    flex-basis: 40%; /* Allow buttons to take up 40% of the space each */
     height: 60px;
-    
-
 }
 
-button:hover{
+button:hover {
     background-color: #4fa553;
     border-radius: 0px;
     border-color: #c2e2c4;
     border-style: solid;
     border-width: 2px;
-    width: 120px;
+    flex-basis: 45%; /* Adjust flex-basis on hover */
     height: 80px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    .divbord {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    button {
+        flex-basis: 100%; /* Ensure buttons stack on smaller screens */
+        height: 50px;
+    }
+
+    .options {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
 }
